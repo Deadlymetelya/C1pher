@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Cipher
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var encoder = new Encoder();
+            encoder.ChosePassword(encoder);
+
+            Console.ReadKey();
+        }
+    }
+}
