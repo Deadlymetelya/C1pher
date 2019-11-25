@@ -9,10 +9,14 @@ namespace Cipher
     class Program
     {
         static void Main(string[] args)
-        {
-            var encoder = new Encoder();
-            encoder.ChosePassword(encoder);
+        {   
+            var start = new Event();
 
+            do
+            {
+                start.ChooseAction();
+            }
+            while (start.action != "exit");
             Console.ReadKey();
         }
     }
