@@ -9,21 +9,24 @@ namespace Cipher
     class Caesar : Logic
     {
         public void Encrypt() {
-            getInfo();
+            setInfo();
             encode(CaesarStep, SourceString);
         }
 
-
+        public void Decrypt() {
+            setInfo();
+            encode(-CaesarStep, SourceString);
+        }
         const string Alfabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 
         private int CaesarStep;
         private string SourceString;
 
-        private void getInfo() {
-            Console.WriteLine("enter the phrase which you want to convert");
+        private void setInfo() {
+            Console.WriteLine(" enter the phrase which you want to convert");
             SourceString = Console.ReadLine();
-            Console.WriteLine("enter the step of cipher");
+            Console.WriteLine(" enter the step of cipher");
             CaesarStep = Console.Read();
         }
         private void encode(int key, string text) {

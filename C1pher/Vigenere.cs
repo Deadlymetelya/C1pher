@@ -9,10 +9,13 @@ namespace Cipher
     class Vigenere : Logic
     {
         public void Encrypt() {
-            getInfo();
+            setInfo();
             encode(SourceString, Password);
         }
-
+        public void Decrypt() {
+            setInfo();
+            decode(SourceString, Password);
+        }
 
         const string defaultAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
@@ -24,10 +27,10 @@ namespace Cipher
 
 
 
-        private void getInfo() {
-            Console.WriteLine("enter the phrase which you want to convert");
+        private void setInfo() {
+            Console.WriteLine(" enter the phrase which you want to convert");
             SourceString = Console.ReadLine().ToUpper();
-            Console.WriteLine("enter the key-pass");
+            Console.WriteLine(" enter the key-pass");
             Password = Console.ReadLine().ToUpper();
         }
 
@@ -41,8 +44,11 @@ namespace Cipher
 
             return p.Substring(0, n);
         }
-        private void encode(string plainMessage, string password) { 
+        private void encode(string plainMessage, string password) {
                 vigenere(plainMessage, password);
+        }
+        private void decode(string encryptedMessage, string password) {
+                vigenere(encryptedMessage, password, false);
         }
         private void vigenere(string text, string password, bool encrypting = true)
         {

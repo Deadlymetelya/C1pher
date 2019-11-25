@@ -6,26 +6,27 @@ using System.Threading.Tasks;
 
 namespace Cipher
 {
-    class Encoder
+    class Decoder
     {
-        public void Encrypt(Logic L) {
-            if (L != null) {
-                L.Encrypt();
-            }
+        public void Decrypt(Logic L) {
+            if (L != null)
+                L.Decrypt();
         }
 
-        public void ChoosePassword(Encoder E) {
+        public void ChoosePassword(Decoder D)
+        {
             Console.WriteLine(" NOW AVAILABLE: caesar, vigenere, xor");
             string c = Console.ReadLine();
-            switch (c) {
+            switch (c)
+            {
                 case "caesar":
-                    E.Encrypt( new Caesar() );
+                    D.Decrypt( new Caesar() );
                     break;
                 case "vigenere":
-                    E.Encrypt( new Vigenere() );
+                    D.Decrypt( new Vigenere() );
                     break;
                 case "xor":
-                    E.Encrypt( new XOR() );
+                    D.Decrypt( new XOR() );
                     break;
                 default:
                     Console.WriteLine(" Undefined cipher");
