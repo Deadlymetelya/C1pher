@@ -1,13 +1,10 @@
 # C1pher
-Current version: v.01
-Simple encoding-decoding program 
+Current version: v.02
+Simple encoding-decoding program
+Available ciphers: XOR, vigenere, caesar
 
 
 (I don't know how to make good readme)
-To-do list:
-  v.02:
-  Decoder
-  XOR cipher
   v.03:
   Decode/encode from .txt files
   Polybius square
