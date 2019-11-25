@@ -5,6 +5,10 @@ Available ciphers: XOR, vigenere, caesar
 
 
 (I don't know how to make good readme)
+
+
+
+to-do list:
   v.03:
   Decode/encode from .txt files
   Polybius square
